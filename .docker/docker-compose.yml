@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  web:
+    image: qwik-beginner-project:$TAG_IMAGE
+    container_name: qwik-beginner-project
+    build:
+      context: Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+    ports:
+      - ${PORT}:80
+    environment:
+      VITE_API_URL: ${!VITE_API_URL}
+      VITE_API_KEY: ${!VITE_API_KEY}

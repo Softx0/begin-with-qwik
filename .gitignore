@@ -6,6 +6,10 @@
 
 # Development
 node_modules
+.env
+.env.production
+.env.stage
+.env.qa
 
 # Cache
 .cache
